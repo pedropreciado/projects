@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Cat!</title>
+  </head>
+  <body>
+    <form action= "<%= cats_url(@cat) %>" method="post">
+      <label for="cat_name">Name:</label>
+      <input type="text" id="cat_name" name="cat[name]">
+      <br>
+      <br>
+      <label> Sex: </label>
+      <input type="radio" id='cat_sex_m' name="cat[sex]" value="m">
+      <label for="cat_sex_m">Male</label>
+      <input type="radio" id='cat_sex_f' name="cat[sex]" value="f">
+      <label for="cat_sex_f">Female</label>
+      <br>
+      <br>
+      <label for="cat_description">Description</label>
+      <textarea id="cat_description" name='cat[description]'></textarea>
+      <br>
+      <br>
+      <label for="cat_color">Color</label>
+      <select name="cat[color]">
+        <option disabled> Color </option>
+        <% colors = %w(black white orange tuxedo tiger-striped calico) %>
+        <% colors.each do |color| %>
+          <option value="<%=color%>"> <%=color.capitalize%> </option>
+        <% end %>
+      </select>
+      <br>
+      <br>
+      <label for="cat_birth_date">Birth Date:</label>
+      <input type="date" name="cat[birth_date]">
+      <br>
+      <br>
+      <input type="submit" value="Build my cat!">
+    </form>
+
+  </body>
+</html>

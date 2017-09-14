@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> <%= @cat.name %> </title>
+  </head>
+  <body>
+    <h1>99 Cats</h1>
+    <h2><%=  @cat.name %></h2>
+    <table>
+      <tr>
+        <td><b>Sex:</b></td>
+        <td> <%= @cat.sex %> </td>
+      </tr>
+      <tr>
+        <td><b>Age:</b></td>
+        <td> <%= @cat.age.capitalize %> </td>
+      </tr>
+      <tr>
+        <td><b>Color:</b></td>
+        <td> <%= @cat.color.capitalize %> </td>
+      </tr>
+      <tr>
+        <td><b>Description:</b></td>
+        <td> <%= @cat.description %> </td>
+      </tr>
+    </table>
+
+    <a href="/cats">Back to Home</a>
+  </body>
+</html>
